@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i&display=swap&subset=cyrillic" rel="stylesheet">
+
     <title>Title</title>
 </head>
 <body>
 
+<form action="http://fe.it-academy.by/TestForm.php" method="get" target="_blank" enctype="multipart/form-data">
+<fieldset>
+    <fieldset>
+        <legend>form 1</legend>
+        <label>
+            firstname
+            <input type="text" name="firstname" readonly tabindex="3" autofocus>
+        </label> <br>
+
+
+        <label for="test">lastname</label>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolore harum in modi odio! A enim excepturi fugiat nesciunt vero! Doloremque dolores, error nostrum nulla omnis porro quisquam sed vel.</p>
+
+
+        <input type="text" id="test" name="lastname" tabindex="2">
+    </fieldset>
+
+    <fieldset>
+        <legend>form 2</legend>
+        <input type="text" name="age" tabindex="1" pattern="[A-Za-z0-9-]+">
+    </fieldset>
+
+    <fieldset>
+        <legend>checkbox</legend>
+        is man?
+        <input type="checkbox" name="isMan[]" value="Yes1">
+        <input type="checkbox" name="isMan[]" value="Yes2">
+        <input type="checkbox" name="isMan[]" value="Yes3">
+    </fieldset>
+
+    <fieldset>
+        <legend>radio1</legend>
+        Your country?
+        <label>
+            Belarus
+            <input type="radio" name="country" value="Belarus">
+        </label>
+        <label>
+            Germany
+            <input type="radio" name="country" value="Germany">
+        </label>
+        <label>
+            Russia
+            <input type="radio" name="country" value="Russia">
+        </label>
+
+
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>radio2</legend>
+        <label>
+            Belarus
+            <input type="radio" name="country1" value="Belarus">
+        </label>
+        <label>
+            Germany
+            <input type="radio" name="country1" value="Germany">
+        </label>
+        <label>
+            Russia
+            <input type="radio" name="country1" value="Russia">
+        </label>
+    </fieldset>
+
+
+    <input type="email" name="email" value="tttt@tut.by" placeholder="enter your email">
+
+
+    <input type="reset" value="reset"> <br>
+    <!--<input type="submit" value="send" >-->
+
+    <input type="file" name="file"> <br>
+
+    <input type="date" name="date"> <br>
+    <input type="number" min="0" max="1000000" step="10" name="number">
+
+
+    <select name="select[]" size="3" multiple>
+        <option value="1">1 rerererere</option>
+        <option value="2">2 rerererere</option>
+        <option value="3">3 rerererere</option>
+        <option value="4">4 rerererere</option>
+        <option value="5">5 rerererere</option>
+    </select>
+
+
+    <input type="range" min="10" max="20" step="3" name="range">
+
+    <button type="submit">
+        <h1>hello</h1>
+        <i>world</i>
+    </button>
+</fieldset>
+</form>
+
+
+
+<!--https://www.exlab.net/files/tools/sheets/regexp/regexp.pdf-->
 </body>
 </html>
