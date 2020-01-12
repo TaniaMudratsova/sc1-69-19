@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #test{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        input{
+
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="test"></div>
+<button>click</button>
+
+<input type="text">
+
+<ul id="sortable">
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--<script>-->
+    <!--var a = 5;//переменная-->
+    <!--var arr = [1,2,4,5,6,7];  //массив-->
+    <!--var obj = {-->
+        <!--name : "Ivan",-->
+        <!--age  : 25,-->
+        <!--isStudent: false-->
+    <!--};-->
+    <!--var students  = [-->
+        <!--{-->
+            <!--name : "Ivan1",-->
+            <!--age  : 25,-->
+            <!--isStudent: false-->
+        <!--},-->
+        <!--{-->
+            <!--name : "Ivan2",-->
+            <!--age  : 25,-->
+            <!--isStudent: false-->
+        <!--},-->
+        <!--{-->
+            <!--name : "Ivan3",-->
+            <!--age  : 25,-->
+            <!--isStudent: false-->
+        <!--},-->
+        <!--{-->
+            <!--name : "Ivan4",-->
+            <!--age  : 25,-->
+            <!--isStudent: false-->
+        <!--},-->
+    <!--];-->
+
+    <!--// console.log('a', a);-->
+    <!--// console.log('arr', arr);-->
+    <!--// console.log('obj', obj);-->
+    <!--// console.log('students', students);-->
+
+
+    <!--function change() {-->
+        <!--var elem = document.getElementById('test');-->
+        <!--elem.style.backgroundColor = 'blue';-->
+        <!--elem.style.marginLeft = '500px';-->
+    <!--}-->
+<!--</script>-->
+<script>
+    $(document).ready(function () {
+        $('button').click(function () {
+            $('#test').fadeToggle(3000, function () {
+                console.log('finish')
+            })
+        });
+
+        $('input').focus(function () {
+            $(this).css({
+                border: '3px solid orange'
+            })
+        });
+
+            $('input').blur(function () {
+            var count = $(this).val();
+            console.log(count.length);
+
+            if(count.length > 10 || count.length === 0) {
+                $(this).css({
+                    border: '3px solid red'
+                })
+            }
+            else{
+                $(this).css({
+                    border: '3px solid green'
+                })
+            }
+        });
+
+        $("#test").draggable();
+
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+    })
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+body{
+    height: 10000px;
+}
+
+.test{
+    /*background-color: #333333;*/
+    color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.carousel{
+    width: 100%;
+}
+.carousel-item{
+    background: no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+.carousel-item:first-child{
+    background-image: url("../img/15-of-the-Worst-Used-Cars-gear-patrol-lead-full.jpg");
+}
+.carousel-item:nth-child(2){
+    background-image: url("../img/1920x0.jpg");
+}
+.carousel-item:last-child{
+    background-image: url("../img/images.jpeg");
+}
+.carousel-control-prev-icon:before{
+    content: "test";
+}
+.carousel-indicators li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.carousel-indicators li.active{
+    background-color: red;
+}
+.card-header{
+    background-color: greenyellow;
+}
